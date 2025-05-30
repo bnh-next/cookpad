@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<body>
+    <ul class="category-list">
+        <li><a href="#" class="category" data-target="#product-category-1">Danh mục 1</a></li>
+        <li><a href="#" class="category" data-target="#product-category-2">Danh mục 2</a></li>
+        <li><a href="#" class="category" data-target="#product-category-3">Danh mục 3</a></li>
+    </ul>
+
+    <div class="product-list">
+        <div id="product-category-1" class="product-category">
+            <h2>Danh mục 1</h2>
+            <p>Sản phẩm thuộc danh mục 1...</p>
+        </div>
+
+        <div id="product-category-2" class="product-category">
+            <h2>Danh mục 2</h2>
+            <p>Sản phẩm thuộc danh mục 2...</p>
+        </div>
+
+        <div id="product-category-3" class="product-category">
+            <h2>Danh mục 3</h2>
+            <p>Sản phẩm thuộc danh mục 3...</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".item").click(function (e) {
+                e.preventDefault();
+                let categoryId = $(this).data("category-id");
+                let target = $("#category-" + categoryId);
+
+                if (target.length) {
+                    $("html, body").animate({
+                        scrollTop: target.offset().top - 100
+                    }, 800, function () 
+                    {
+                        console.log("✅ Đã cuộn thành công đến danh mục: #category-" + categoryId);
+                    });
+                } else {
+                    console.log("❌ Không tìm thấy phần tử: #category-" + categoryId);
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

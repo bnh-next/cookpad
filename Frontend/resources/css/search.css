@@ -1,0 +1,33 @@
+.container-item-search .item {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+}
+
+.container-item-search .item .img {
+    width: 200px;
+}
+
+.container-item-search .item .img img {
+    border-radius: 20px;
+    width: 200px;
+    height: 100%;
+}
+
+.container-item-search .item:hover {
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.container-item-search .item .desc .description {
+    font-size: 20px;
+}
+
+.container-item-search .item .desc span {
+    font-size: 18px;
+}
+
+

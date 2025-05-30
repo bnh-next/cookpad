@@ -1,0 +1,15 @@
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/__pycache__  # Tránh cache các file bytecode trong thư mục dự án
+      - /app/.venv  # Cách ly môi trường ảo trong container
+    environment:
+      UV_HTTP_TIMEOUT: 60  # Bạn có thể định nghĩa các biến môi trường trực tiếp ở đây
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload  # Thêm `--reload` để tự động load lại mã nguồn khi thay đổi

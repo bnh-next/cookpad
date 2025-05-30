@@ -1,0 +1,138 @@
+.container-item-search .item {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    width: 75%;
+}
+.main-panel .footer-image
+{
+    margin-top: 150px;
+}
+.container-item-search .item .img
+{
+    position: relative;
+    display: block;
+    width: 200px;
+    padding-top: 20% !important;
+    height: inherit;
+    overflow: hidden;
+    box-shadow: none;
+    z-index: 0;
+}
+.no-info-left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.no-food-img
+{
+    width: 100px;
+    height: 100px;
+}
+.form-outline-custom
+{
+    width: 300px;
+}
+.no-food-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-item-search .item .img img {
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 200px;
+    object-fit: cover !important;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s, -webkit-transform 8s cubic-bezier(.25,.46,.45,.94);
+    transition: all 0.3s, transform 8s cubic-bezier(.25,.46,.45,.94), -webkit-transform 8s cubic-bezier(.25,.46,.45,.94);
+
+}
+
+.container-item-search .item:hover {
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.container-item-search .item .desc .description {
+    font-size: 16px;
+}
+
+.container-item-search .item .desc span {
+    font-size: 18px;
+}
+
+.container-item-search .item .desc .name .name_dish {
+    font-size: 24px;
+    font-weight: 700;
+    color: #252525;
+    margin-bottom: 0px;
+}
+
+.search-products-ingredient {
+    position: relative;
+}
+
+.search-products-ingredient .search-ajax-result {
+    position: absolute;
+    /* background-color: #fff; */
+    width: 295px;
+    z-index: 99;
+}
+.suggestion-item
+{
+    background-color: #fff;
+    padding: 8px !important;
+    border-bottom: none !important;
+}
+.btn-search-ingredient
+{
+    width: 130px;
+    border-radius: 12px !important;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: unset;
+    background-color: #FF9933;
+    padding: 12px 0px;
+}
+
+.input-search {
+    width: 350px;
+    height: 45px !important;
+}
+.input-search::placeholder{
+    font-size: 15px !important;
+}
+#ingredient-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.tag-item {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+
+}
+
+.tag-item span {
+    margin-left: 5px;
+    color: red;
+    font-weight: bold;
+}

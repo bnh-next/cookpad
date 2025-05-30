@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "FastAPI",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "debugpy",
+        "args": [
+          "-m", "uvicorn",
+          "app.main:app",
+          "--host", "127.0.0.1",
+          "--port", "8000",
+          "--reload"  // Tùy chọn để tự động tải lại
+        ],
+        "justMyCode": false,
+        "jinja": true
+      }
+    ]
+  }
+  
